@@ -1,8 +1,8 @@
-const CHART = document.getElementById('lineChart');
+const LINE_CHART = document.getElementById('lineChart');
 
 Chart.defaults.global.legend.position = 'right';
 
-let lineChart = new Chart(CHART, {
+let lineChart = new Chart(LINE_CHART, {
   type: 'line',
   data: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -34,6 +34,66 @@ let lineChart = new Chart(CHART, {
         lineTension: 0.3,
         backgroundColor: 'rgba(75,72,192, 0.4)',
         borderColor: 'rgba(75,72,192, 1)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJointStyle: 'miter',
+        pointBorderColor: 'rgba(75, 72, 192, 1)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(75, 72, 192, 1)',
+        pointHoverBorderColor: 'rgba(220, 220, 220, 1)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [40, 55, 56, 81, 80, 59, 69],
+      },
+    ],
+  },
+  options: {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  },
+});
+
+const BAR_CHART = document.getElementById('barChart');
+
+let barChart = new Chart(BAR_CHART, {
+  type: 'bar',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My Third dataset',
+        backgroundColor: 'rgba(75,192,192, 0.4)',
+        borderColor: 'rgba(75,192,192, 1)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJointStyle: 'miter',
+        pointBorderColor: 'rgba(75, 192, 192, 1)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(75, 192, 192, 1)',
+        pointHoverBorderColor: 'rgba(220, 220, 220, 1)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [65, 59, 80, 81, 56, 55, 40],
+      },
+      {
+        label: 'My Fourth dataset',
+        backgroundColor: 'rgba(180,72,192, 0.4)',
+        borderColor: 'rgba(180,72,192, 1)',
         borderCapStyle: 'butt',
         borderDash: [],
         borderDashOffset: 0.0,
